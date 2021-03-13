@@ -1,0 +1,36 @@
+<div class="accordion">
+    <table>
+        <tbody class="title" (click)="opened=!opened">
+            <tr> 
+                <td>{{ warehouse.name }}</td>
+                <td>{{ warehouse.address }}, {{ warehouse.zipCode }}: {{ warehouse.country }}</td>
+                <td>{{ warehouse.area }}</td>
+                <td>{{ warehouse.employees }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="content-container" [class.opened]="opened">
+        <button (click)="toWarehouse(warehouse.name)">Details</button>
+        <table>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>Department</td>
+                    <td>Manufacturer</td>
+                    <td>Stock</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of warehouse.inventory" (click)="toProduct(item.product.productCode)">
+                    <td>{{ item.product.name }}</td>
+                    <td>{{ item.product.price }}</td>
+                    <td>{{ item.product.department }}</td>
+                    <td>{{ item.product.manufacturer }}</td>
+                    <td>{{ item.stock }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

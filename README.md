@@ -1,0 +1,3 @@
+# Project Warehouses
+
+This project centred around fullstack web programming where a nodejs api was to serve data for an angular application. The backend uses nodejs and express along with mongodb to manage data about a fictional warehouse system featuring products and warehouses as well as encrypted user account details. The frontend is built in angular and lets an authorized user interact with the data. Styling and UI design was not a central concern of this project and has not been given significant attention. A published version of the frontend can be found [here](https://studenter.miun.se/~alag1901/dt162g/project/overview). The backend was published separately using Heroku.

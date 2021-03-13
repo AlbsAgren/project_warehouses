@@ -1,0 +1,23 @@
+<header>
+  <div class="header-content">
+    <h1 class="center">Warehouse System</h1>
+    <app-user-dashboard class="user-dash"></app-user-dashboard>
+  </div>
+  <div class="navbar">
+    <nav>
+      <ul>
+        <li (click)="navTo('/')">Home</li>
+        <li (click)="navTo('/add-product')">Add product</li>
+        <li (click)="navTo('/add-user')">Add user</li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+  <p class="center">Footer placeholder</p>
+</footer>

@@ -1,0 +1,47 @@
+<h2>Warehouse Details</h2>
+
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Location</td>
+            <td>Storage Area (m2)</td>
+            <td>Employees</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr> 
+            <td>{{ warehouse.name }}</td>
+            <td>{{ warehouse.address }}, {{ warehouse.zipCode }}: {{ warehouse.country }}</td>
+            <td>{{ warehouse.area }}</td>
+            <td>{{ warehouse.employees }}</td>
+       </tr>
+    </tbody>
+</table>
+
+<h2>Products</h2>
+
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Department</td>
+            <td>Manufacturer</td>
+            <td>Stock</td>
+            <td>Update</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of warehouse.inventory">
+            <td>{{ item.product.name }}</td>
+            <td>{{ item.product.price }}</td>
+            <td>{{ item.product.department }}</td>
+            <td>{{ item.product.manufacturer }}</td>
+            <td>{{ item.stock }}</td>
+            <td><input type="number" value="{{ item.stock }}" #newStock></td>
+            <td><button class="detail-button"(click)="updateStock(newStock.value, item.product._id)">Update stock</button></td>
+        </tr>
+    </tbody>
+</table>

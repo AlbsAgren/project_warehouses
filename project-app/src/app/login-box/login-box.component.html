@@ -1,0 +1,9 @@
+<h3>Log in</h3>
+
+<form class="flex-showcase" [formGroup]="loginForm" (ngSubmit)=attemptLogin()>
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="username">
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password">
+    <button class="submit-button" type="submit" [disabled]="!loginForm.valid">Log In</button>
+</form>

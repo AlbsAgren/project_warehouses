@@ -1,0 +1,19 @@
+<h2>Add new product</h2>
+<form class="flex-showcase" [formGroup]="productForm" (ngSubmit)="addProduct()">
+    <label for="name">Product name:</label>
+    <input type="text" id="name" formControlName="name">
+    <div class="error-msg" *ngIf="name && name.invalid">Required</div>
+    <label for="description">Description:</label>
+    <input type="text" id="description" formControlName="description">
+    <label for="price">Price:</label>
+    <input type="text" id="price" formControlName="price">
+    <label for="color">Color:</label>
+    <input type="text" id="color" formControlName="color">
+    <label for="material">Material:</label>
+    <input type="text" id="material" formControlName="material">
+    <label for="department">Department:</label>
+    <input type="text" id="department" formControlName="department">
+    <label for="manufacturer">Manufacturer:</label>
+    <input type="text" id="manufacturer" formControlName="manufacturer">
+    <button class="submit-button" type="submit" [disabled]="!productForm.valid">Add</button>
+</form>

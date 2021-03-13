@@ -1,0 +1,3 @@
+<app-user-info *ngIf="loggedIn" (logoutEvent)="logOut()"></app-user-info>
+
+<app-login-box *ngIf="!loggedIn" (loginEvent)="attemptLogin($event)"></app-login-box>

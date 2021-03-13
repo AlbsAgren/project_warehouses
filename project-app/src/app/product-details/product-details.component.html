@@ -1,0 +1,25 @@
+<h2>{{ product.name }}</h2>
+<table>
+    <thead>
+        <tr>
+            <td>Price</td>
+            <td>Color</td>
+            <td>Material</td>
+            <td>Department</td>
+            <td>Manufacturer</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ product.price }}</td>
+            <td>{{ product.color }}</td>
+            <td>{{ product.material }}</td>
+            <td>{{ product.department }}</td>
+            <td>{{ product.manufacturer }}</td>
+            <td><button class="detail-button"(click)="deleteProduct(product.productCode)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+<h3>Description</h3>
+<p>{{ product.description }}</p>

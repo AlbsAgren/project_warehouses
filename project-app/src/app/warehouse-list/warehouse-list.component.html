@@ -1,0 +1,14 @@
+<h2>Warehouses</h2>
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Location</td>
+            <td>Storage Area (m2)</td>
+            <td>Employees</td>
+        </tr>
+    </thead>
+</table>
+
+<app-product-accordion *ngFor="let warehouse of warehouseArray | orderBy: 'name'" [warehouse]="warehouse">
+</app-product-accordion>

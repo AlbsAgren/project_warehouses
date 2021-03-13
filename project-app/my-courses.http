@@ -1,0 +1,86 @@
+// Get all courses
+GET http://localhost:3000/api/warehouses
+
+###
+
+// Get all my courses
+GET http://localhost:3000/api/warehouses/wh1
+
+###
+
+// get specific course
+GET http://localhost:3000/api/products
+
+###
+
+GET http://localhost:3000/api/products/100000
+
+
+###
+
+// Add my course
+POST http://localhost:3000/api/warehouses/add HTTP/1.1
+content-type: application/json
+
+    {
+        "name": "WH11",
+        "address": "5463 Otis Green",
+        "zipCode": "57884",
+        "city": "East Mack",
+        "country": "Chad",
+        "area": 1478,
+        "employees": 120,
+        "inventory": []
+    }
+
+###
+
+POST http://localhost:3000/api/products/add HTTP/1.1
+content-type: application/json
+
+    {
+        "name": "Handcrafted Granite Chicken",
+        "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+        "price": "8067.00",
+        "color": "mint green",
+        "material": "Rubber",
+        "department": "Baby",
+        "manufacturer": "Wiegand LLC"
+    }
+
+
+###
+
+// Update my course
+PUT http://localhost:3000/api/warehouses/wh3 HTTP/1.1
+content-type: application/json
+
+{
+    "id": "5ff3368ec711e34c64ee2702",
+    "stock": 993
+}
+
+###
+
+DELETE http://localhost:3000/api/products/100040
+###
+
+POST http://localhost:3000/login/new HTTP/1.1
+content-type: application/json
+
+    {
+        "personname": "User Usersson",
+        "username": "testUser",
+        "password": "data123"
+    }
+
+###
+
+POST http://localhost:3000/login/authenticate HTTP/1.1
+content-type: application/json
+
+    {
+        "personname": "Sven Svansson",
+        "username": "daAlbs2",
+        "password": "albinman"
+    }

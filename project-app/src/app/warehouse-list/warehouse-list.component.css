@@ -1,0 +1,13 @@
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    height: 40px;
+    width: 100%;
+}
+
+thead td {
+    font-weight: bold;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 4px 20px 4px 0px;
+}

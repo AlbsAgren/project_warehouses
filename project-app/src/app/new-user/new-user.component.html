@@ -1,0 +1,12 @@
+<h2>Add user</h2>
+<form class="flex-showcase" [formGroup]="userForm" (ngSubmit)="addUser()">
+    <label for="personname">Personname:</label>
+    <input type="text" id="personname" formControlName="personname">
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="username">
+    <div class="error-msg" *ngIf="username && username.invalid">Required (4-16 characters)</div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password">
+    <div class="error-msg" *ngIf="password && password.invalid">Required (4-16 characters)</div>
+    <button type="submit" class="submit-button" [disabled]="!userForm.valid">Add</button>
+</form>

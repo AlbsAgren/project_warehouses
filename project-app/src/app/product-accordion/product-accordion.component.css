@@ -1,0 +1,53 @@
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    height: 40px;
+    width: 100%;
+}
+
+thead td {
+    font-weight: bold;
+    border-bottom: 2px solid gray;
+    padding: 4px 20px 4px 0px;
+}
+
+tbody td {
+    border-bottom: 1px solid gray;
+    padding: 4px 20px 4px 0px; 
+}
+
+tbody tr:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+button {
+    background-color: #33755f;
+    color: #000000;
+    display: inline-block;
+    border: none;
+    padding: 15px 30px;
+    margin: 0;
+    text-decoration: none;
+    font-size: 12pt;
+    text-align: center;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #20473a;
+}
+
+.content-container {
+    overflow: hidden;
+    max-height: 0;
+}
+  
+.content-container.opened {
+    max-height: none;
+}
+
+.product-heading {
+    position: sticky;
+    top: 0;
+}
